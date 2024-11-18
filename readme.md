@@ -4,8 +4,8 @@ This is an implementation of the popular game commonly known as _Wordle_.
 The game is played in the console. There is a Swedish and an English dictionary
 available and it comes with a tool to add additional dictionaries for more languages
 
-The game was developed as an optional assignment in the course 1NX002 given at
-Umeå University 
+The game was developed as an optional assignment in the course 
+[1NX002](https://www.umu.se/en/education/syllabus/1nx002/) given at Umeå University 
 
 ## Example gameplay
 
