@@ -106,7 +106,9 @@ class GameModel:
         bool
             True if the player has won, False otherwise
         """
-        checks = self.lines[-1][1] if self.lines else []
+        if not self.lines:
+            return False
+        checks = self.lines[-1][1]
         return all(check == GameModel.CORRECT_LETTER_AND_POSITION for check in checks)
     
     def play(self, word: str) -> list[int]:
