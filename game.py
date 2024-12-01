@@ -165,13 +165,14 @@ class GameView:
               
         """
     
-        def __init__(self, display_used: bool = False):
+        def __init__(self, lang_code: str = 'sv', display_used: bool = False):
+            self.lang_code = lang_code
             self.display_used = display_used
     
         def display_welcome(self):
             """Display a welcome message with the rules of the game.
             """
-            print('\n\nWelcome to the game of wordle!')
+            print(f'\n\nWelcome to the game of wordle! (language: {self.lang_code})')
             print('I am thinking of a five-letter word.')
             print('You have 6 tries to guess the word.')
             print('After each guess, you will receive feedback on the correctness of the letters.')

@@ -12,6 +12,6 @@ if __name__ == '__main__':
     with open('res/words_' + lang_code + '.txt', 'r') as file:
         words = [line.strip() for line in file]
     model = GameModel(words)
-    view = GameView()
+    view = GameView(lang_code)
     controller = GameController(model, view)
     controller.play()
