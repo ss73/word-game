@@ -243,20 +243,25 @@ class GameView:
             """
             print('\n\n😢 Game over! The target word was:', target_word, '\n\n')
 
-        def get_input(self, message: str) -> str:
-            """Get input from the user.
+        def display_invalid_word(self, bad_word: str):
+            """Display a message informing that the entered word is incorrect.
 
             Parameters:
             ----------
-            message : str
-                The message to display to the user
+            bad_word : str
+                The invalid word 
+            """
+            print('Invalid word:', bad_word)
+
+        def get_word_input(self) -> str:
+            """Get a word input from the user.
 
             Returns:
             -------
             str
                 The input from the user
             """
-            return input(message).lower()
+            return input('Enter a word:').lower()
         
 
 class GameController:
@@ -291,9 +296,9 @@ class GameController:
         while self.model.tries_left():
             self.view.display_lines(self.model.lines)
             self.view.display_used_letters(self.model.used_letters)
-            word = self.view.get_input('Enter a word: ')
+            word = self.view.get_word_input()
             if not self.model.valid_word(word):
-                print('Invalid word:', word)
+                self.view.display_invalid_word(word)
                 continue
             self.model.play(word)
             if self.model.has_won():
