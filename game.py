@@ -160,28 +160,24 @@ class GameView:
         
         Parameters:
         ----------
+        messages : dict
+            Dictionary of localized strings for the outputs
+        lang_code : str, default 'sv'
+            Two-letter language code of the dictionary used for the game
         display_used : bool, default False
             If True, the set of used letters are printed after each move
               
         """
-    
-        def __init__(self, lang_code: str = 'sv', display_used: bool = False):
+ 
+        def __init__(self, messages: dict, lang_code: str = 'sv', display_used: bool = False):
+            self.msg = messages
             self.lang_code = lang_code
             self.display_used = display_used
     
         def display_welcome(self):
             """Display a welcome message with the rules of the game.
             """
-            print(f'\n\nWelcome to the game of wordle! (language: {self.lang_code})')
-            print('I am thinking of a five-letter word.')
-            print('You have 6 tries to guess the word.')
-            print('After each guess, you will receive feedback on the correctness of the letters.')
-            print('The feedback is given as follows:')
-            print(' *X*  - correct letter in the correct position')
-            print(' (X)  - correct letter, but in the wrong position')
-            print('  X   - incorrect letter')
-            print('\nGood luck!\n\n')
-
+            print(self.msg['welcome'])
 
         def display_lines(self, lines: list[(str, list[int])]) -> None:
             """"Draw a grid with the words and checks as in the example below.
@@ -231,17 +227,22 @@ class GameView:
             """
             if not used_letters or not self.display_used:
                 return
-            print('Used letters:', ' '.join(used_letters))
+            print(self.msg['used_letters'], ' '.join(used_letters))
 
         def display_winning_message(self):
             """Display a winning message.
             """
-            print('\n\n🏆 Congratulations 🏆 You won! Perhaps another game?\n\n')
+            print(self.msg['winner'])
 
         def display_game_over(self, target_word: str):
             """Display a game over message with the target word.
+
+            Parameters:
+            ----------
+            target_word : str
+                The 'secret' word to be guessed 
             """
-            print('\n\n😢 Game over! The target word was:', target_word, '\n\n')
+            print(self.msg['game_over'], target_word.upper(), '\n\n')
 
         def display_invalid_word(self, bad_word: str):
             """Display a message informing that the entered word is incorrect.
@@ -251,7 +252,7 @@ class GameView:
             bad_word : str
                 The invalid word 
             """
-            print('Invalid word:', bad_word)
+            print(self.msg['invalid_word'], bad_word)
 
         def get_word_input(self) -> str:
             """Get a word input from the user.
@@ -261,7 +262,7 @@ class GameView:
             str
                 The input from the user
             """
-            return input('Enter a word:').lower()
+            return input(self.msg['enter_word_prompt']).lower()
         
 
 class GameController:
@@ -308,6 +309,4 @@ class GameController:
         else:
             self.view.display_lines(self.model.lines)
             self.view.display_game_over(self.model.target_word)
-
-
 

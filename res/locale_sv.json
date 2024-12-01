@@ -1,0 +1,8 @@
+{
+    "welcome" : "\n\nVälkommen till ordspelet Ordlig!\nJag tänker på ett ord med fem bokstäver.\nDu har sex försök på dig att lista ut ordet.\nEfter varje försök får du återkoppling avseende korrektheten i varje enskild bokstav.\nÅterkoppling ges som följer:\n *X*  - rätt bokstav på rätt plats\n (X)  - rätt bokstav men på fel plats\n  X   - bokstaven finns inte med i ordet\n\nLycka till!\n\n",
+    "used_letters" : "Spelade bokstäver:",
+    "winner" : "\n\n🏆 Grattis 🏆 Du har vunnit! Kanske en omgång till?\n\n",
+    "game_over" : "\n\n😢 Tyvärr, inga försök kvar. Ordet som söktes var:",
+    "invalid_word" : "Ogiltigt ord:",
+    "enter_word_prompt" : "Ange ett ord: "
+}

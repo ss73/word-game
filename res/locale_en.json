@@ -1,0 +1,8 @@
+{
+    "welcome" : "\n\nWelcome to the game of wordle!\nI am thinking of a five-letter word.\nYou have 6 tries to guess the word.\nAfter each guess, you will receive feedback on the correctness of the letters.\nThe feedback is given as follows:\n *X*  - correct letter in the correct position\n (X)  - correct letter, but in the wrong position\n  X   - incorrect letter\n\nGood luck!\n\n",
+    "used_letters" : "Used letters:",
+    "winner" : "\n\n🏆 Congratulations 🏆 You won! Perhaps another game?\n\n",
+    "game_over" : "\n\n😢 Game over! The target word was:",
+    "invalid_word" : "Invalid word:",
+    "enter_word_prompt" : "Enter a word: "
+}
