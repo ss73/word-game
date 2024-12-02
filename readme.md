@@ -2,10 +2,16 @@
 
 This is an implementation of the popular game commonly known as _Wordle_. 
 The game is played in the console. There is a Swedish and an English dictionary
-available and it comes with a tool to add additional dictionaries for more languages
+available and it comes with a tool to add additional dictionaries for more languages. 
 
 The game was developed as an optional assignment in the course 
-[1NX002](https://www.umu.se/en/education/syllabus/1nx002/) given at Umeå University 
+[1NX002](https://www.umu.se/en/education/syllabus/1nx002/) given at Umeå University. The goal of the project has been to practice some of the skills gained troughout the course: 
+ * Object Oriented Programming, in this case using a Model-View-Controller (MVC) pattern for the game implementation
+ * Documenting Python code using the [Numpy style guide](https://numpydoc.readthedocs.io/en/latest/format.html)
+ * Working with type hints
+ * Avoiding code smells (hopefully there aren't too many)
+ * Structuring code in packages and modules
+ * Unit testing with the [unittest](https://docs.python.org/3/library/unittest.html) library
 
 ## Example gameplay
 
@@ -55,14 +61,20 @@ Enter a word: kupar
 
 You need a [python](https://www.python.org/downloads/) interpreter (v.3.9 or higher) to run the game, that's all.
 Assuming you have installed Python, follow these steps to install and run the program:
-* Clone the repository into a directory of choice (or download zip)
-* Optionally - if you want to use another dictionary
-  * Download a dic file for your language [here](https://github.com/titoBouzout/Dictionaries)
-  * Place the dic file in the `res` folder and rename it `raw_<lang code>.txt`
+ * Clone the repository into a directory of choice (or download zip)
+ * Run the game: `python main.py [lang code]`
+ * If lang code is omitted, you will be prompted to enter the language code
+
+## How to add more languages
+
+If you want to add another language (localization and dictionary), follow these steps:
+  * Download a dictionary file for your language, for example from [here](https://github.com/titoBouzout/Dictionaries)
+  * Place the dictionary file in the `res` folder and rename it `raw_<lang code>.txt`
   * Create a file called `chars_<lang_code>.txt`containing a single line with the allowed characters for the language
   * Run `python tools/process_dict.py <lang code>`
-* Run the game: `python main.py [lang code]`
-* If lang code is omitted, the default language of Swedish (sv) will be used
+  * Provide a translation file for the in-game messages and store it as a JSON file `locale_<lang code>.json` in the `res` folder (copy/paste the `locale_en.json` file and use an editor to supply your translation)
+
+If you _do_ take the effort to create a translation and dictionary for another language, it would be nice with a pull request to have it included in the repository, but that is completely voluntary.
 
 ## Credits
 The Swedish [dictionary](https://github.com/titoBouzout/Dictionaries/blob/master/Swedish.dic) is based on "Den stora svenska ordlistan" by Göran Andersson complemented with the work of Tom Westerberg. [Information and license (in Swedish)](https://github.com/titoBouzout/Dictionaries/blob/master/Swedish.txt).
