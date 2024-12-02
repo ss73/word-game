@@ -62,8 +62,8 @@ Enter a word: kupar
 You need a [python](https://www.python.org/downloads/) interpreter (v.3.9 or higher) to run the game, that's all.
 Assuming you have installed Python, follow these steps to install and run the program:
  * Clone the repository into a directory of choice (or download zip)
- * Run the game: `python main.py [lang code]`
- * If lang code is omitted, you will be prompted to enter the language code
+ * Run the game: `python main.py [lang code]` e.g. `python main.py sv` for Swedish
+ * If lang code is omitted, you will be prompted to choose one of the language codes for which there are translations available.
 
 ## How to add more languages
 
