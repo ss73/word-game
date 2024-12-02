@@ -2,9 +2,9 @@ import sys
 import glob
 import json
 
-from game import GameModel
-from game import GameView
-from game import GameController
+from game.game import GameModel
+from game.game import GameView
+from game.game import GameController
 
 if __name__ == '__main__':
     lang_code = ''
