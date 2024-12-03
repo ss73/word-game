@@ -30,27 +30,27 @@ The feedback is given as follows:
 Good luck!
 
 
-Enter a word: pling
+Enter a word: trick
 +-----+-----+-----+-----+-----+
-| (P) |  L  |  I  |  N  |  G  |
+| (T) |  R  | *I* |  C  |  K  |
 +-----+-----+-----+-----+-----+
-Enter a word: släkt
+Enter a word: frost
 +-----+-----+-----+-----+-----+
-| (P) |  L  |  I  |  N  |  G  |
-|  S  |  L  |  Ä  | (K) |  T  |
+| (T) |  R  | *I* |  C  |  K  |
+|  F  |  R  |  O  |  S  | *T* |
 +-----+-----+-----+-----+-----+
-Enter a word: kropp
+Enter a word: quick
 +-----+-----+-----+-----+-----+
-| (P) |  L  |  I  |  N  |  G  |
-|  S  |  L  |  Ä  | (K) |  T  |
-| *K* | (R) |  O  | (P) |  P  |
+| (T) |  R  | *I* |  C  |  K  |
+|  F  |  R  |  O  |  S  | *T* |
+| *Q* | *U* | *I* |  C  |  K  |
 +-----+-----+-----+-----+-----+
-Enter a word: kupar
+Enter a word: quint
 +-----+-----+-----+-----+-----+
-| (P) |  L  |  I  |  N  |  G  |
-|  S  |  L  |  Ä  | (K) |  T  |
-| *K* | (R) |  O  | (P) |  P  |
-| *K* | *U* | *P* | *A* | *R* |
+| (T) |  R  | *I* |  C  |  K  |
+|  F  |  R  |  O  |  S  | *T* |
+| *Q* | *U* | *I* |  C  |  K  |
+| *Q* | *U* | *I* | *N* | *T* |
 +-----+-----+-----+-----+-----+
 
 
